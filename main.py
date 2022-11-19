@@ -21,12 +21,12 @@ def main():
     signal.signal(signal.SIGINT, SigIntHandler)
     global toggle
     toggle=True
-    tabs=7
+    tabs=3
     count=1
     while(True):
         if(toggle):
             tabs, count = altTab.AltTabLoop(tabs, count)
             print("Press ctrl + C to pause the program and see how to end this program")
-            time.sleep(10)
+            time.sleep(30)
 
 main()

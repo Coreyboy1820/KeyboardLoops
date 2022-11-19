@@ -14,4 +14,6 @@ def AltTabLoop(tabs, count):
         count=1
     else:
         count=count+1
+    time.sleep(1)
+    gui.hotkey('ctrl', 'r')
     return tabs, count
