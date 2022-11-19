@@ -8,7 +8,7 @@ def AltTabLoop(tabs, count, refresh, refresh_count):
         time.sleep(.05)
         gui.press('tab')
         time.sleep(.05)
-        i = i + 1
+        i += 1
     gui.keyUp('alt')
     if count == (tabs-1):
         count=1
@@ -20,4 +20,5 @@ def AltTabLoop(tabs, count, refresh, refresh_count):
         if refresh_count == 2:
             refresh == 0
             refresh_count = 0
+        refresh_count += 1
     return tabs, count, refresh, refresh_count

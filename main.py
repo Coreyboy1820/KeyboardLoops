@@ -29,7 +29,7 @@ def main():
         if(toggle):
             tabs, count, refresh, refresh_count = altTab.AltTabLoop(tabs, count, refresh, refresh_count)
             print("Press ctrl + C to pause the program and see how to end this program")
-            refresh = refresh + 1
+            refresh += 1
             time.sleep(30)
 
 main()
