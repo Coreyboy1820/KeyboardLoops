@@ -17,8 +17,8 @@ def AltTabLoop(tabs, count, refresh, refresh_count):
     if refresh >= 20:
         time.sleep(1)
         gui.hotkey('ctrl', 'r')
-        if refresh_count == 2:
-            refresh == 0
+        if refresh_count == tabs-1:
+            refresh = 0
             refresh_count = 0
         refresh_count += 1
     return tabs, count, refresh, refresh_count
