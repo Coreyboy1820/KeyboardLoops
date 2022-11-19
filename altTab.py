@@ -1,7 +1,7 @@
 import pyautogui as gui
 import time
 
-def AltTabLoop(tabs, count):
+def AltTabLoop(tabs, count, refresh, refresh_count):
     gui.keyDown('alt')
     i=0
     while i < count:
@@ -14,6 +14,10 @@ def AltTabLoop(tabs, count):
         count=1
     else:
         count=count+1
-    time.sleep(1)
-    gui.hotkey('ctrl', 'r')
-    return tabs, count
+    if refresh >= 20:
+        time.sleep(1)
+        gui.hotkey('ctrl', 'r')
+        if refresh_count == 2:
+            refresh == 0
+            refresh_count = 0
+    return tabs, count, refresh, refresh_count
