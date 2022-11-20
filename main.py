@@ -21,7 +21,7 @@ def main():
     signal.signal(signal.SIGINT, SigIntHandler)
     global toggle
     toggle=True
-    tabs=3
+    tabs=4
     count=1
     refresh=0
     refresh_count = 0
